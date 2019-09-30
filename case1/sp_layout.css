@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 1
+   
+   Layout styles for Slate and Pencil Tutoring
+   Author: Zackery Hatch
+   Date:   9-24-19
+   
+   Filename: sp_layout.css
+
+*/
+
+/* Window and Body Styles */
+html {
+	min-height: 100%;
+	height: 100%;
+}
+body {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 640px;
+	max-height: 960px;
+}
+header,
+ul,
+nav,
+li,
+a {
+	box-sizing: border-box;
+}
+/* Row Styles */
+.row {
+	clear: both;
+}
+.row::after {
+	width: 100%;
+	clear: both;
+	content: "";
+	display: table;
+}
+/* Page Header Styles */
+header > img {
+	display: block;
+	width: 70%;
+	float: left;
+}
+body > header nav {
+	float: left;
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 30%;
+	font-size: 1.5em;
+}
+nav a {
+	display: block;
+	width: 100%;
+}
+/* Horizontal Navigation List Styles */
+nav.horizontal > ul.row > li {
+	display: block;
+	width: 12.5%;
+	float: left;
+}
+/* Topics Styles */
+ul#topics > li {
+	display: block;
+	width: 20%;
+	float: left;
+	margin-left: 0%;
+	margin-right: 1.5%;
+}
+/* Go to the Topics Styles section. This section sets the styles for a list of four topics describing what
+	the company is offering. Karen wants this list to also be displayed horizontally on the page. For list items
+	within the ul element with the id topics, create a style rule to:
+	a) display the items as blocks with a width of 20%
+	b) float the items on the left margin, and
+	c) set the size of the left margin space to 0% and the right margin space to 1.5%.
+  */
+ul#topics > li:first-child {
+	margin-left: 7.75%;
+}
+ul#topics > li:last-child {
+	margin-right: 7.75%;
+}
+/* Karen wants the topics list to be well away from the left and right edges of the page body. In the same
+	section, create a rule that sets the size of the left margin of the first item in the topics list to 7.75%
+	and sets the right margin of the last item to 7.75%.
+  */
+ul#topics > li > img {
+	display: block;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* In the same section, create a rule that displays the image within each list item in the topics list as a
+	block with a width of 50% and centered within the list item block. (Hint: Set the left and right margins
+	to auto.)
+  */
+/* HR Styles */
+hr {
+	width: 50%;
+}
+/* Go to the HR Styles section. The hr element is used to display a horizontal divider between sections
+	of the page. Add a style rule that sets the width of the hr element to 50%.
+  */
+/* Customer Comment Styles */
+ul#comments {
+	width: 75%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Go to the Customer Comment Styles section. In this section, you will create style rules for the
+	customer comments displayed near the bottom of the page. For the ul element with the id comments,
+	create a style rule that sets the width to 75% and centers the element by setting the top/bottom
+	margin to 40 pixels and the left/right margin to auto.
+  */
+ul#comments > li {
+	display: block;
+	width: 50%;
+	float: left;
+	margin-bottom: 30px;
+}
+/* Karen wants the list items to appear in two columns on the page. In the same section, create a style
+	rule for every list item in the comments list that:
+	a) displays the item as a block with a width of 50% floated on the left and
+	b) sets the size of the bottom margin to 30 pixels.
+  */
+ul#comments > li > img {
+	display: block;
+	width: 20%;
+	float: left;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+/* Every customer comment is accompanied by an image of the student. Karen wants these images displayed
+	to the left of the comment. Create a style rule to display the image within each comment list item as
+	a block with a width of 20%, floated on the left, and with a left/right margin of 5%.
+  */
+ul > p {
+	float: left;
+	width: 75%;
+}
+/* Create a style rule for every paragraph nested within a customer list item that floats the paragraph
+	on the left margin with a width of 70%.
+  */
+/* Footer Styles */
+footer {
+	clear: both;
+}
+/* Go to the Footer Styles section and create a style rule that displays the footer only when both margins
+	are clear of floating objects.
+  */
